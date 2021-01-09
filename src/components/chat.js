@@ -5,18 +5,18 @@ import sanitize from 'rehype-sanitize';
 
 function getUsernameColor(roles) {
   if (roles.includes('BROADCASTER')) {
-    return 'red';
+    return 'var(--color-broadcaster)';
   }
 
   if (roles.includes('MODERATOR')) {
-    return 'blue';
+    return 'var(--color-moderator)';
   }
 
   if (roles.includes('SUBSCRIBER')) {
-    return 'purple';
+    return 'var(--color-moderator)';
   }
 
-  return 'gray';
+  return 'var(--color-default)';
 }
 
 export function Chat() {
