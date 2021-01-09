@@ -7,7 +7,9 @@ import {
 import { Chat } from '../components/chat.js';
 
 export default () => {
-  const client = createSocketStudioClient(process.env.TOAST_SOCKET_STUDIO_URL);
+  const client = createSocketStudioClient(
+    'https://api.streamblitz.com/graphql',
+  );
 
   return (
     <SocketStudioProvider client={client}>
