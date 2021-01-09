@@ -1,0 +1,42 @@
+{
+  "type": "module",
+  "name": "twitch-scenes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "breadbox --dest public/web_modules",
+    "build": "toast incremental .",
+    "dev": "npm run build && http-server public",
+    "serve": "http-server public"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sector/breadbox": "0.0.4",
+    "@socket-studio/preact": "^1.0.0-canary.16",
+    "rehype": "^11.0.0",
+    "rehype-sanitize": "^4.0.0",
+    "toast": "^0.3.39"
+  },
+  "snowpack": {
+    "exclude": [
+      "public/**",
+      "commonjs-compat/**",
+      "toast.js"
+    ],
+    "installOptions": {
+      "alias": {
+        "react": "preact/compat"
+      }
+    },
+    "knownEntrypoints": [
+      "preact",
+      "preact/hooks"
+    ]
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}

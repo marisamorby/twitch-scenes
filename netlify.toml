@@ -1,0 +1,9 @@
+[build]
+  command = "toast incremental ."
+  publish = "public"
+
+[dev]
+  autoLaunch = false
+  framework = "#custom"
+  targetPort = 8080
+  command = "npm run dev"
